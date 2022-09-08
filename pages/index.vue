@@ -1,14 +1,19 @@
 <template>
-  <div class="p-4">
-    <div>Video para MP3</div>
+  <div class="d-flex justify-content-center" id="bg-all">
+    <div class="p-4 " id="bg-main">
+
+    <h1 class="text-white display-4 text-center">Video</h1>
+    <h1 class="text-white display-6 text-center"><em>para</em></h1>
+    <h1 class="text-white display-4 text-center">MP3</h1>
     <div>
-      <InputForm v-model="endereco"/>
+      <InputForm v-model="endereco" />
     </div>
     <div class="d-flex justify-content-end mb-2" >
       <ButtonForm :nomeBotao="'Buscar'" class="pr-4" @click="formatUrl()"/>
       <ButtonForm :nomeBotao="'Limpar'" :tipoBotao="'btn btn-outline-info'" class="pr-4" @click="limpar()" />
     </div>
     <TableFormVue :video="video" v-if="video"/>
+    </div>
   </div>
 </template>
 
@@ -55,7 +60,7 @@ export default {
       };
 
       // axios.request(options).then(function (response) {
-      //   console.log(response.data);
+      //   console.log(response.data); 
       axios.request(options).then(response => {
         console.log(response.data)
         this.video = response.data
@@ -69,5 +74,30 @@ export default {
 </script>
 
 <style>
+#bg-all {
+  background-image: linear-gradient(to bottom right, #14162f, #13182e);
+}
+
+#bg-main {
+  background-image: url("../static/wallpaper.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  
+}
+
+@media (min-width: 576px) { 
+  #bg-main {
+    width: 25%;
+    height: 100vh;
+    background-size: cover;
+    background-size: 25% 100%;
+    
+    
+  }
+ }
 
 </style>

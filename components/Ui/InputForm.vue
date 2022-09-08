@@ -1,6 +1,6 @@
 <template>
   <div class="form-group">
-    <label for="inputUrlVideo">Endereço do vídeo:</label>
+    <label for="inputUrlVideo" class="text-white">Endereço do vídeo:</label>
     <input 
     type="text" 
     class="form-control" 
@@ -47,5 +47,16 @@ export default {
 </script>
 
 <style>
+input[type="text"] {
+    border: 3px solid #ab79d6;
+    border-radius: 0;
+    color: #00bbcb;
+    background: #27272c;
+}
 
+input[type="text"]:focus {
+    border: 1px solid #ab79d6;
+    color: #00bbcb;
+    background: #27272c;
+}
 </style>

@@ -30,7 +30,7 @@
       </div>
       <div class="mt-2">
         <a :href="linkDownload" target="_blank">
-            <button type="button" class="btn btn-success w-100" >Baixar</button>
+            <ButtonForm :nomeBotao="'Baixar'" :tipoBotao="'btn btn-success w-100'"/>
         </a>
       </div>
     </div>
@@ -39,6 +39,8 @@
 
 <script>
 import axios from "axios";
+import ButtonForm from './ButtonForm.vue';
+
 export default {
     name: 'TableForm',
     props: {
@@ -48,6 +50,9 @@ export default {
         return {
             linkDownload: null,
         }
+    },
+    components: {
+      ButtonForm,
     },
     created() {
         this.baixar(this.video.id)

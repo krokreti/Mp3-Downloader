@@ -18,5 +18,21 @@ export default {
 </script>
 
 <style>
+button[type="button"] {
+  font-weight: 700;
+}
 
+.btn-secondary {
+  background-color: #ab79d6;
+  color: #351d4a;
+  border: 2px solid transparent;
+  transition: none .18s ease-in-out;
+  transition-property: background-color,color,border-color;
+}
+
+.btn-secondary:hover {
+  background-color: #351d4a;
+  color: #ab79d6;
+  border: 2px solid #ab79d6;
+}
 </style>
