@@ -66,6 +66,7 @@ export default {
       }).catch(function (error) {
         console.error(error);
       });
+      // 13182e
     }
 
   },
@@ -79,6 +80,7 @@ export default {
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family: Summer;
   src: url("../static/SummerSunshine.woff");
@@ -91,30 +93,37 @@ export default {
 
 #bg-all {
   background-image: linear-gradient(to bottom right, #14162f, #13182e);
-  height: 100vh;
+  height: max-content;
   width: 100%;
 }
 
 #bg-main {
-  width: 100%;
+  width: 100vw;
   background-image: url("../static/wallpaper.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
-  overflow: auto;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: auto;
 }
 
 @media (min-width:1200px) {
   #bg-main {    
-    width: 25%;
-    background-size: 25% 100%;
+    width: 30%;
+    height: 100vh;
+    background-size: 30% 100%;
+    overflow: auto;
   }
+  #bg-main::-webkit-scrollbar {
+    display: none;
+}
 }
 
 @media (min-width: 576px) { 
 
  }
+
+
 
 </style>

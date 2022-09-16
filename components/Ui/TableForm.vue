@@ -26,13 +26,13 @@
         </div>
       </div>
       <div class="row border d-flex align-items-center justify-content-center rounded bg-light  p-2">
-        <img :src="video.thumb" alt="Thumb" class="border rounded-lg ">
+        <img :src="video.thumb" alt="Thumb" class="border rounded-lg" style="width:19rem;">
       </div>
     </div>
-          <div class="mt-2">
-        <a :href="linkDownload" target="_blank">
-            <ButtonForm :nomeBotao="'Baixar'" :tipoBotao="'btn btn-success w-100'"/>
-        </a>
+      <div class="mt-2">
+       <a :href="linkDownload" target="_blank">
+         <ButtonForm :nomeBotao="'Baixar'" :tipoBotao="'btn btn-success w-100'"/>
+       </a>
       </div>
   </div>
 </template>
