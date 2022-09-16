@@ -70,14 +70,12 @@ export default {
                 'X-RapidAPI-Host': 'youtube-mp3-download1.p.rapidapi.com'
             }
             };
-
-            axios.request(options).then( response => {
+          try {
+            const response = await axios.request(options) ;
                 this.linkDownload = response.data.link
-                console.log('response link: ')
-                console.log(response.data);
-            }).catch(function (error) {
-                console.error(error);
-            });
+          } catch (error) {
+            console.error(error);
+          }     
         }
     },
 }

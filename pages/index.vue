@@ -40,9 +40,9 @@ export default {
   methods: {
     limpar() {
       this.endereco = "";
+      this.video= "";
     },
     formatUrl() {
-      //https://www.youtube.com/watch?v=z5-3BiXsv0s&ab_channel=TalksCortes
       let arrayEndereco = this.endereco.split("https://www.youtube.com/watch?v=")
       let arraySplit = arrayEndereco[1].split("&")
       this.id = arraySplit[0]
