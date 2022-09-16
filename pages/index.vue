@@ -2,9 +2,9 @@
   <div class="d-flex justify-content-center" id="bg-all">
     <div class="p-4 " id="bg-main">
 
-    <h1 class="text-white display-4 text-center">Video</h1>
-    <h1 class="text-white display-6 text-center"><em>para</em></h1>
-    <h1 class="text-white display-4 text-center">MP3</h1>
+    <h1 class="text-white display-4 text-center" style="font-family: Mabook; "> < Video > </h1>
+    <h1 class="text-white display-6 text-center" style="font-family: Mabook; " ><em>para</em></h1>
+    <h1 class="display-4 text-center"> <p style="font-family: Summer; color: #ab79d6; text-shadow: 2px 2px 10px #00bbcb;">MP3</p></h1>
 
     <div>
       <InputForm v-model="endereco" />
@@ -13,7 +13,7 @@
       <ButtonForm :nomeBotao="'Buscar'" class="pr-4" @click="formatUrl()"/>
       <ButtonForm :nomeBotao="'Limpar'" :tipoBotao="'btn btn-outline-info'" class="pr-4" @click="limpar()" />
     </div>
-        <TableFormVue :video="video" v-if="video" class="mt-4"/>
+      <TableFormVue :video="video" v-if="video" class="mt-4"/>
     </div>
   </div>
 </template>
@@ -79,6 +79,16 @@ export default {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Summer;
+  src: url("../static/SummerSunshine.woff");
+}
+
+@font-face {
+  font-family: Mabook;
+  src: url("../static/Mabook.woff");
+}
+
 #bg-all {
   background-image: linear-gradient(to bottom right, #14162f, #13182e);
   height: 100vh;
@@ -86,23 +96,25 @@ export default {
 }
 
 #bg-main {
-  background-image: url("../static/wallpaper.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
+  background-image: url("../static/wallpaper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   overflow: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width:1200px) {
+  #bg-main {    
+    width: 25%;
+    background-size: 25% 100%;
+  }
 }
 
 @media (min-width: 576px) { 
-  #bg-main {
-    width: 25%;
-    background-size: cover;
-    background-attachment: fixed;
-    
-  }
+
  }
 
 </style>

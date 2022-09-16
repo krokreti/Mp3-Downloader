@@ -1,6 +1,6 @@
 <template>
   <div class="form-group">
-    <label for="inputUrlVideo" class="text-white">Endereço do vídeo:</label>
+    <label for="inputUrlVideo" class="text-white lead">Endereço do vídeo:</label>
     <input 
     type="text" 
     class="form-control" 

@@ -2,26 +2,26 @@
   <div>
     <div class="container text-center " >
       <div class="row ">
-        <div class="col d-flex align-items-center justify-content-center font-weight-bold border rounded bg-light ">
+        <div class="col d-flex align-items-center justify-content-center font-weight-bold border rounded bg-light mb-1 mr-1">
           Título: 
         </div>
-        <div class="col border rounded bg-light">
+        <div class="col border rounded bg-light mb-1">
           {{ video.title }}
         </div>
       </div>
       <div class="row">
-        <div class="col d-flex align-items-center justify-content-center font-weight-bold border rounded bg-light">
+        <div class="col d-flex align-items-center justify-content-center font-weight-bold border rounded bg-light mb-1 mr-1">
           Canal:
         </div>
-        <div class="col border rounded bg-light">
+        <div class="col border rounded bg-light mb-1">
           {{ video.author }}
         </div>
       </div>
       <div class="row">
-        <div class="col d-flex align-items-center justify-content-center font-weight-bold border rounded bg-light">
+        <div class="col d-flex align-items-center justify-content-center font-weight-bold border rounded bg-light mb-1 mr-1" >
           Duração:
         </div>
-        <div class="col border rounded bg-light">
+        <div class="col border rounded bg-light mb-1">
           {{ video.length }}
         </div>
       </div>
